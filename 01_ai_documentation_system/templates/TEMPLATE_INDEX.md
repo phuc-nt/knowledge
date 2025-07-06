@@ -15,8 +15,10 @@ Danh sách đầy đủ các template có sẵn trong bộ công cụ này.
 | [feature_backlog.md](docs_structure/01_preparation/feature_backlog.md) | Quản lý features | 30 phút | 80% |
 | [project_roadmap.md](docs_structure/01_preparation/project_roadmap.md) | Timeline & milestones | 25 phút | 85% |
 | [progress_tracker.md](docs_structure/03_implementation/progress_tracker.md) | Theo dõi tiến độ | 10 phút | 85% |
-| [AI Onboarding Prompt](sample_prompts/ai_onboarding_prompt.md) | Onboard AI nhanh | 5 phút | 85% |
-| [SRS Creation Prompt](sample_prompts/srs_creation_prompt.md) | Tạo SRS với AI | 30 phút | 90% |
+| [AI Onboarding Prompt](sample_prompts/ai_onboarding_prompt.md) | Onboard AI nhanh với biến thể | 5 phút | 90% |
+| [SRS Creation Guide](sample_prompts/srs_creation_prompt.md) | Hướng dẫn phỏng vấn AI | 10 phút | 95% |
+| [SRS Assistant Instruction](sample_prompts/srs_assistant_instruction_prompt.md) | "Định danh" AI chuyên gia | 5 phút | 95% |
+| [Requirement Chat History](actual_sample/requirement_chat_history.md) | Ví dụ thực tế tạo SRS | N/A | Tham khảo |
 
 ## 🚀 **Quick Start Guide**
 
@@ -49,17 +51,18 @@ touch .cursorrules
    - Team size
    - Goals
 
-### **Bước 3: Tạo SRS**
-1. Sử dụng [SRS Creation Prompt](sample_prompts/srs_creation_prompt.md)
-2. Thay thế placeholders trong prompt
-3. Chạy với Reasoning AI (Claude, ChatGPT)
-4. Lưu kết quả vào `docs/01_preparation/srs_v1.md`
+### **Bước 3: Tạo SRS Bằng Phương Pháp Phỏng Vấn**
+1. **Định danh AI**: Copy nội dung từ [SRS Assistant Instruction](sample_prompts/srs_assistant_instruction_prompt.md) vào chat AI
+2. **Bắt đầu trò chuyện**: Trình bày ý tưởng ban đầu ("tôi muốn làm...")
+3. **Để AI dẫn dắt**: Trả lời các câu hỏi của AI chuyên gia
+4. **Tham khảo ví dụ**: Xem [Requirement Chat History](actual_sample/requirement_chat_history.md)
+5. **Lưu kết quả**: Vào `docs/01_preparation/srs_v1.md`
 
 ### **Bước 4: Onboard AI**
-1. Sử dụng [AI Onboarding Prompt](sample_prompts/ai_onboarding_prompt.md)
-2. Customize cho AI cụ thể
-3. Test với AI mới
-4. Điều chỉnh nếu cần
+1. **Chọn biến thể**: Từ [AI Onboarding Prompt](sample_prompts/ai_onboarding_prompt.md)
+2. **Điền thông tin**: Project name, session goals
+3. **Test với AI**: Đảm bảo AI hiểu context
+4. **Điều chỉnh**: Nếu cần thiết
 
 ## 📁 **Template Details**
 
@@ -127,17 +130,31 @@ touch .cursorrules
 
 ### **AI Interaction Templates**
 
-#### **AI Onboarding Prompt** - Quick Start
-- **Mục đích**: Onboard AI trong <5 phút
+#### **AI Onboarding Prompt** - Quick Start với Biến Thể
+- **Mục đích**: Onboard AI trong <5 phút với các kịch bản khác nhau
 - **Thời gian setup**: 5 phút
-- **Tái sử dụng**: 85%
-- **Cần customize**: Project info, session goals
-
-#### **SRS Creation Prompt** - Requirements
-- **Mục đích**: Tạo SRS chi tiết với AI
-- **Thời gian setup**: 30 phút
 - **Tái sử dụng**: 90%
-- **Cần customize**: Project description, constraints
+- **Cần customize**: Project info, session goals, chọn biến thể phù hợp
+- **Biến thể**: Onboarding, New Task, Review, Debugging
+
+#### **SRS Creation Guide** - Phương Pháp Phỏng Vấn
+- **Mục đích**: Hướng dẫn tạo SRS qua trò chuyện với AI chuyên gia
+- **Thời gian setup**: 10 phút
+- **Tái sử dụng**: 95%
+- **Cần customize**: Không cần, chỉ cần follow hướng dẫn
+
+#### **SRS Assistant Instruction** - "Định Danh" AI Chuyên Gia
+- **Mục đích**: Biến AI thành chuyên gia phân tích nghiệp vụ
+- **Thời gian setup**: 5 phút
+- **Tái sử dụng**: 95%
+- **Cần customize**: Không cần, copy nguyên văn
+
+### **Reference Materials**
+
+#### **Requirement Chat History** - Ví Dụ Thực Tế
+- **Mục đích**: Minh họa quá trình tạo SRS hoàn chỉnh
+- **Thời gian đọc**: 15 phút
+- **Giá trị**: Hiểu rõ cách áp dụng phương pháp phỏng vấn AI
 
 ## 🎯 **Customization Guide**
 
@@ -150,6 +167,8 @@ touch .cursorrules
 | `{{MAIN_GOAL}}` | "Create AI chat app" | Mục tiêu chính |
 | `{{CURRENT_WEEK}}` | "3 of 18" | Tuần hiện tại |
 | `{{TEAM_SIZE}}` | "Solo developer" | Quy mô team |
+| `{{AI_ROLE}}` | "Senior Developer Assistant" | Vai trò AI |
+| `{{SESSION_GOAL_1}}` | "Implement user authentication" | Mục tiêu phiên làm việc |
 
 ### **Sections to Customize**
 
@@ -158,6 +177,7 @@ touch .cursorrules
 3. **Features**: Liệt kê từ SRS
 4. **Tools**: Chọn tools phù hợp
 5. **Process**: Điều chỉnh cho team size
+6. **AI Prompts**: Chọn biến thể và điền thông tin cụ thể
 
 ## 🔧 **Advanced Usage**
 
@@ -178,15 +198,16 @@ EOF
 
 ### **Team Onboarding**
 1. Chia sẻ template library
-2. Tạo team-specific customizations
+2. Train team về phương pháp phỏng vấn AI
 3. Document team conventions
-4. Train team trên workflow
+4. Regular practice sessions
 
 ### **Continuous Improvement**
 - Thu thập feedback từ team
 - Cập nhật templates dựa trên lessons learned
 - Version control cho templates
 - Share improvements với community
+- Cải tiến AI prompts dựa trên kết quả thực tế
 
 ## 📊 **Success Metrics**
 
@@ -195,12 +216,14 @@ EOF
 - [ ] Setup dự án mới <30 phút
 - [ ] Team hiểu workflow ngay lập tức
 - [ ] Docs luôn up-to-date
+- [ ] SRS quality cao hơn với phương pháp phỏng vấn
 
 ### **Process Efficiency**
 - [ ] Giảm 80% thời gian setup
 - [ ] Tăng 50% consistency
 - [ ] Giảm 90% onboarding time
 - [ ] Tăng AI collaboration quality
+- [ ] Cải thiện chất lượng requirement gathering
 
 ## 🛠️ **Troubleshooting**
 
@@ -210,11 +233,19 @@ EOF
 - Kiểm tra placeholders đã thay thế chưa
 - Đảm bảo links trong docs hoạt động
 - Cập nhật current_status.md
+- Sử dụng đúng biến thể AI onboarding prompt
+
+**SRS không đầy đủ**:
+- Đảm bảo đã "định danh" AI đúng cách
+- Kiên nhẫn trả lời tất cả câu hỏi của AI
+- Tham khảo requirement_chat_history.md
+- Yêu cầu AI đặt thêm câu hỏi nếu cần
 
 **Team không follow process**:
 - Simplify workflow
 - Provide more examples
 - Regular training sessions
+- Demonstrate AI collaboration benefits
 
 **Templates quá phức tạp**:
 - Tạo simplified version
@@ -223,13 +254,15 @@ EOF
 
 ## 🎉 **Next Steps**
 
-1. **Thử nghiệm**: Setup 1 dự án nhỏ
-2. **Customize**: Điều chỉnh cho team
-3. **Scale**: Áp dụng cho nhiều dự án
-4. **Improve**: Cập nhật dựa trên feedback
-5. **Share**: Chia sẻ với community
+1. **Thử nghiệm**: Setup 1 dự án nhỏ với phương pháp mới
+2. **Practice**: Luyện tập phỏng vấn AI để tạo SRS
+3. **Customize**: Điều chỉnh cho team
+4. **Scale**: Áp dụng cho nhiều dự án
+5. **Improve**: Cập nhật dựa trên feedback
+6. **Share**: Chia sẻ với community
 
 ---
 
 *Template system được tạo ra từ kinh nghiệm thực tế với iOS Chatbot project*  
+*Phương pháp phỏng vấn AI được phát triển và kiểm chứng qua thực tế*  
 *Cập nhật lần cuối: {{LAST_UPDATED}}* 
