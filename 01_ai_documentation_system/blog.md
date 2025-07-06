@@ -117,6 +117,16 @@ Các thư mục còn lại (`01_preparation`, `02_development`, etc.) đóng vai
 
 Sự phân chia này giúp mọi thứ ngăn nắp và dễ tìm. Khi AI cần thông tin chi tiết về một yêu cầu, nó biết cần phải tìm trong `01_preparation/srs_v1.md`. Khi nó cần setup môi trường, nó sẽ vào `02_development/dev_env_guide.md`.
 
+## Sẵn Sàng Để Bắt Đầu? Bộ Template "Cắm và Chạy"
+
+Lý thuyết là vậy, nhưng làm thế nào để triển khai hệ thống này một cách nhanh nhất mà không phải tạo lại từ đầu?
+
+Để giúp bạn tiết kiệm thời gian, tôi đã đóng gói toàn bộ hệ thống tài liệu này thành một **bộ template mã nguồn mở**, sẵn sàng để bạn "clone" về và sử dụng ngay. Bạn có thể tìm thấy nó tại đây:
+
+➡️ **[AI Documentation System Templates on GitHub](https://github.com/phuc-nt/knowledge/tree/master/01_ai_documentation_system/templates)**
+
+Bộ template này chứa toàn bộ cấu trúc thư mục, các file mẫu, và cả những prompt AI hữu ích được đề cập trong bài viết này. Thay vì xây dựng từ con số không, bạn có thể bắt đầu từ 80% công việc đã được hoàn thành.
+
 ## Làm Thế Nào Để Bắt Đầu? Lộ Trình Xây Dựng "Bộ Não" Cùng Team AI Của Bạn
 
 Hệ thống này trông có vẻ đồ sộ, nhưng việc xây dựng nó lại khá đơn giản nếu bạn phân vai và đi đúng hướng. Dưới đây là lộ trình, phân biệt rõ đâu là **khuôn mẫu có thể tái sử dụng** và vai trò của từng AI trong quy trình.

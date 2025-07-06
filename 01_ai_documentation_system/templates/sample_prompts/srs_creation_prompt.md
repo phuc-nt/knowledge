@@ -1,169 +1,48 @@
-# SRS Creation Prompt Template
+# Hướng Dẫn Tạo SRS Bằng Phương Pháp Trò Chuyện với AI
 
 <!-- 
 📝 HƯỚNG DẪN SỬ DỤNG:
-1. Dùng prompt này với Reasoning AI (Claude, ChatGPT, v.v.)
-2. Thay thế {{PLACEHOLDER}} bằng thông tin thực tế của dự án
-3. Có thể chia nhỏ thành nhiều lần chat nếu dự án phức tạp
-4. Kết quả sẽ là file SRS chi tiết để team development sử dụng
+- Phương pháp này hiệu quả hơn nhiều so với việc điền vào một template dài.
+- Nó biến việc tạo SRS thành một cuộc phỏng vấn tự nhiên với một "Chuyên gia AI".
+- Hãy làm theo 2 bước đơn giản dưới đây.
 -->
 
-## 🎯 **SRS Creation Prompt**
+## Tại Sao Dùng Phương Pháp Này?
 
-```
-I need you to help me create a comprehensive Software Requirements Specification (SRS) document for my new project. I'll provide you with the basic idea, and you'll help me develop it into a detailed, actionable specification.
-
-## 📋 **Project Information**
-
-**Project Name**: {{PROJECT_NAME}}
-**Project Type**: {{PROJECT_TYPE}} (e.g., "Mobile App", "Web Application", "Desktop Software", "API Service")
-**Platform**: {{TARGET_PLATFORM}} (e.g., "iOS", "Android", "Web", "Cross-platform")
-**Target Audience**: {{TARGET_USERS}} (e.g., "General consumers", "Business users", "Developers")
-
-## 💡 **Core Idea**
-
-{{PROJECT_DESCRIPTION}}
-<!-- Example:
-"I want to create an iOS chatbot app that allows users to connect to multiple LLM providers (OpenAI, Anthropic, etc.) using their own API keys. The app should provide a clean, native iOS experience with conversation history, different AI models, and secure API key storage."
--->
-
-## 🎯 **Key Goals**
-
-1. {{GOAL_1}} (e.g., "Provide a native iOS alternative to web-based AI chats")
-2. {{GOAL_2}} (e.g., "Support multiple LLM providers in one app")
-3. {{GOAL_3}} (e.g., "Ensure user privacy and data security")
-4. {{GOAL_4}} (e.g., "Create an intuitive, user-friendly interface")
-
-## 🚀 **Success Criteria**
-
-- {{SUCCESS_CRITERION_1}} (e.g., "App approved on App Store")
-- {{SUCCESS_CRITERION_2}} (e.g., "Supports at least 3 major LLM providers")
-- {{SUCCESS_CRITERION_3}} (e.g., "Positive user feedback on usability")
-- {{SUCCESS_CRITERION_4}} (e.g., "No security vulnerabilities in API key handling")
-
-## 🔧 **Technical Constraints**
-
-- **Budget**: {{BUDGET_CONSTRAINT}} (e.g., "Bootstrap/minimal cost", "Small budget", "Well-funded")
-- **Timeline**: {{TIMELINE_CONSTRAINT}} (e.g., "3 months", "6 months", "No strict deadline")
-- **Team Size**: {{TEAM_SIZE}} (e.g., "Solo developer", "2-3 developers", "Full team")
-- **Technical Skills**: {{TECH_SKILLS}} (e.g., "Experienced iOS developer", "Full-stack developer", "Beginner")
-
-## 📱 **Platform Requirements**
-
-- **Primary Platform**: {{PRIMARY_PLATFORM}}
-- **Secondary Platforms**: {{SECONDARY_PLATFORMS}} (if any)
-- **Minimum OS Version**: {{MIN_OS_VERSION}} (e.g., "iOS 15+", "Android 8+")
-- **Device Support**: {{DEVICE_SUPPORT}} (e.g., "iPhone + iPad", "Phone only")
-
-## 🎨 **User Experience Expectations**
-
-- **Design Style**: {{DESIGN_STYLE}} (e.g., "Modern, minimalist", "Colorful and playful", "Professional")
-- **Complexity Level**: {{COMPLEXITY_LEVEL}} (e.g., "Simple and intuitive", "Feature-rich", "Power user focused")
-- **Performance**: {{PERFORMANCE_EXPECTATIONS}} (e.g., "Fast and responsive", "Smooth animations", "Low battery usage")
-
-## 🔒 **Security & Privacy Requirements**
-
-- **Data Storage**: {{DATA_STORAGE}} (e.g., "Local only", "Cloud sync optional", "Cloud-first")
-- **API Keys**: {{API_KEY_HANDLING}} (e.g., "User-provided, stored securely", "App-managed", "Both options")
-- **Privacy Level**: {{PRIVACY_LEVEL}} (e.g., "No data collection", "Minimal analytics", "Full analytics")
-
-## 🛠️ **Technical Preferences**
-
-- **Architecture**: {{ARCHITECTURE_PREFERENCE}} (e.g., "MVVM", "Clean Architecture", "No preference")
-- **Database**: {{DATABASE_PREFERENCE}} (e.g., "Core Data", "SQLite", "Realm", "No preference")
-- **UI Framework**: {{UI_FRAMEWORK}} (e.g., "SwiftUI", "UIKit", "React Native", "Flutter")
-- **Testing**: {{TESTING_PREFERENCE}} (e.g., "Unit tests required", "Basic testing", "Comprehensive testing")
-
-## 📊 **Business Requirements**
-
-- **Monetization**: {{MONETIZATION}} (e.g., "Free and open source", "Freemium", "Paid app", "Subscription")
-- **Distribution**: {{DISTRIBUTION}} (e.g., "App Store only", "Open source", "Enterprise")
-- **Support**: {{SUPPORT_LEVEL}} (e.g., "Community support", "Basic support", "Full support")
-
-## 🎯 **What I Need From You**
-
-Please create a comprehensive SRS document that includes:
-
-1. **Executive Summary** - High-level overview
-2. **Functional Requirements** - What the app should do
-3. **Non-Functional Requirements** - Performance, security, usability
-4. **User Stories** - Detailed user scenarios
-5. **Technical Architecture** - High-level technical approach
-6. **API Specifications** - If applicable
-7. **Data Models** - Core data structures
-8. **User Interface Requirements** - Key screens and flows
-9. **Security Requirements** - Detailed security considerations
-10. **Testing Strategy** - How to validate the requirements
-11. **Deployment Strategy** - How to release the app
-12. **Maintenance Plan** - Post-launch considerations
-
-## 📝 **Output Format**
-
-Please structure the SRS as a markdown document with:
-- Clear headings and sections
-- Numbered requirements for easy reference
-- User stories in "As a [user], I want [goal] so that [benefit]" format
-- Technical details appropriate for developers
-- Acceptance criteria for each major feature
-
-## 🔄 **Iterative Process**
-
-After you provide the initial SRS:
-1. I'll review and provide feedback
-2. We'll refine unclear or missing requirements
-3. We'll prioritize features for MVP vs future versions
-4. We'll finalize the document for development
-
-Ready to start? Please ask any clarifying questions you need, then begin creating the SRS document.
-```
+Việc bắt AI điền vào một template dài thường không hiệu quả. Thay vào đó, chúng ta sẽ "dạy" cho AI cách trở thành một chuyên gia phân tích nghiệp vụ, sau đó trò chuyện với nó. AI sẽ chủ động đặt câu hỏi để khai thác thông tin từ bạn, giúp tài liệu SRS được tạo ra một cách tự nhiên, đầy đủ và chính xác hơn.
 
 ---
 
-## 🎯 **Follow-up Prompts**
+## **Bước 1: Cung Cấp "Bộ Não" Cho AI (Định Danh Chuyên Gia)**
 
-### **For Refinement:**
-```
-Please review the SRS and:
-1. Identify any ambiguous requirements
-2. Suggest missing requirements you think are important
-3. Prioritize features into MVP, Version 2, and Future categories
-4. Estimate complexity for each major feature (Simple/Medium/Complex)
-```
+Trước khi bắt đầu, bạn cần "cài đặt" cho AI vai trò và kỹ năng của một chuyên gia khai thác yêu cầu.
 
-### **For Technical Deep-dive:**
-```
-Please expand the technical architecture section with:
-1. Detailed component diagrams
-2. Database schema design
-3. API endpoint specifications
-4. Security implementation details
-5. Performance optimization strategies
-```
+1.  **Mở file**: `01_ai_documentation_system/templates/sample_prompts/srs_assistant_instruction_prompt.md`
+2.  **Copy toàn bộ nội dung** của file đó.
+3.  **Dán vào cửa sổ chat** với AI của bạn (ví dụ: Claude, Gemini, ChatGPT) như lời nhắn **đầu tiên** trong một phiên hội thoại mới.
 
-### **For User Experience:**
-```
-Please create detailed user journey maps for:
-1. First-time user onboarding
-2. Daily usage scenarios
-3. Power user workflows
-4. Error handling and recovery
-```
+Thao tác này sẽ "biến" AI của bạn thành một chuyên gia phân tích nghiệp vụ, sẵn sàng để phỏng vấn bạn.
 
 ---
 
-## 📊 **Quality Checklist**
+## **Bước 2: Bắt Đầu Cuộc Phỏng Vấn**
 
-A good SRS should be:
-- [ ] **Complete**: All requirements covered
-- [ ] **Consistent**: No contradictions
-- [ ] **Clear**: Unambiguous language
-- [ ] **Correct**: Technically feasible
-- [ ] **Ranked**: Prioritized by importance
-- [ ] **Verifiable**: Testable requirements
-- [ ] **Modifiable**: Easy to update
-- [ ] **Traceable**: Requirements linked to goals
+Nhiệm vụ của bạn bây giờ rất đơn giản:
 
----
+1.  **Trình bày ý tưởng ban đầu** của mình một cách ngắn gọn và tự nhiên. Ví dụ:
+    > "tôi muốn làm một chatbot ios, sử dụng được llm api key của nhiều bên, đặc biệt là của openrouter.ai"
 
-*Template based on {{PROJECT_NAME}} SRS creation experience*  
-*Last updated: {{LAST_UPDATED}}* 
+2.  **Chờ AI đặt câu hỏi**. AI sẽ bắt đầu phỏng vấn bạn, mỗi lần hỏi khoảng 2-3 câu để làm rõ ý tưởng.
+
+3.  **Kiên nhẫn trả lời** các câu hỏi của AI. Quá trình này có thể lặp lại nhiều lần. AI sẽ tự động dẫn dắt bạn đi qua các khía cạnh cần thiết của dự án.
+
+4.  **Chờ AI tổng hợp**. Khi cảm thấy đã có đủ thông tin, AI sẽ hỏi bạn có muốn tạo tài liệu SRS hay không.
+
+5.  **Review và tinh chỉnh**. Sau khi AI tạo ra bản SRS đầu tiên, bạn có thể yêu cầu nó chỉnh sửa hoặc bổ sung nếu cần.
+
+### **Ví Dụ Thực Tế**
+
+Để xem một ví dụ hoàn chỉnh về cuộc hội thoại từ đầu đến cuối và kết quả SRS được tạo ra, bạn có thể tham khảo file:
+➡️ `01_ai_documentation_system/actual_sample/requirement_chat_history.md`
+
+File này ghi lại chính xác quá trình một người dùng đã trò chuyện với AI theo phương pháp này để tạo ra một tài liệu yêu cầu chi tiết.
