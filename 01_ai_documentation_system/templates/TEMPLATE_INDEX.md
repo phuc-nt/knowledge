@@ -6,7 +6,7 @@ Danh sách đầy đủ các template có sẵn trong bộ công cụ này.
 
 | Template | Mục đích | Thời gian setup | Tái sử dụng |
 |----------|----------|-----------------|-------------|
-| [README.md](docs_structure/README.md) | Điểm vào chính của docs | 10 phút | 90% |
+| [START_POINT.md](docs_structure/START_POINT.md) | Điểm vào chính của docs | 10 phút | 90% |
 | [project_overview.md](docs_structure/00_context/project_overview.md) | Context dài hạn | 15 phút | 70% |
 | [current_status.md](docs_structure/00_context/current_status.md) | Context ngắn hạn | 5 phút | 80% |
 | [task_management_guide.md](docs_structure/00_guides/task_management_guide.md) | Quy trình làm việc | 20 phút | 95% |
@@ -68,7 +68,7 @@ touch .cursorrules
 
 ### **Core Documentation Templates**
 
-#### **README.md** - Điểm Vào Chính
+#### **START_POINT.md** - Điểm Vào Chính
 - **Mục đích**: Navigation hub cho toàn bộ docs
 - **Thời gian setup**: 10 phút
 - **Tái sử dụng**: 90%

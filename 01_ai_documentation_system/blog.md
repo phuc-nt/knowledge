@@ -35,12 +35,12 @@ docs/
 ├── 02_development/
 ├── 03_implementation/
 ├── 04_troubleshooting/
-└── README.md         <-- TRÁI TIM CỦA HỆ THỐNG
+└── START_POINT.md    <-- TRÁI TIM CỦA HỆ THỐNG
 ```
 
 Hãy cùng khám phá từng thành phần của "bộ não" này.
 
-### 1. `docs/README.md`: Cánh Cổng Không Gian Dịch Chuyển
+### 1. `docs/START_POINT.md`: Cánh Cổng Không Gian Dịch Chuyển
 
 Đây là file quan trọng nhất, là điểm khởi đầu **DUY NHẤT** cho bất kỳ ai. Thay vì một file README truyền thống mô tả dự án, chúng tôi biến nó thành một **bảng chỉ dẫn thông minh (smart routing table)**.
 
@@ -79,7 +79,7 @@ Chỉ bằng cách định vị vai trò của mình, người dùng (cả ngư�
 -   **Hiệu quả**: Mỗi vai trò chỉ đọc những gì thực sự cần thiết cho họ.
 -   **Dễ bảo trì**: Chỉ cần cập nhật các đường link ở một nơi duy nhất.
 
-Lệnh đầu tiên của tôi cho một AI trong phiên làm việc mới luôn là: **"Hãy đọc và tuân theo chỉ dẫn trong `docs/README.md`."**
+Lệnh đầu tiên của tôi cho một AI trong phiên làm việc mới luôn là: **"Hãy đọc và tuân theo chỉ dẫn trong `docs/START_POINT.md`."**
 
 ### 2. `docs/00_context/`: "Bộ Não" Cốt Lõi Của AI
 
@@ -142,7 +142,7 @@ Trước khi bắt đầu, hãy hiểu rõ tài sản của bạn:
 | Loại Tài Liệu | Ví Dụ | Tái Sử Dụng? | Ghi Chú |
 | :--- | :--- | :--- | :--- |
 | **Khung Sườn & Quy Trình** | Toàn bộ cấu trúc thư mục `docs/`, `task_management_guide.md`, `checklist_system_guide.md` | ✅ **Tái sử dụng 100%** | Đây là bộ khung xương sống, bạn chỉ cần tạo một lần và sao chép cho các dự án mới. |
-| **Template** | `docs/README.md`, `current_status.md` (bản mẫu), `progress_tracker.md` | ✅ **Tái sử dụng như mẫu** | Bạn dùng lại cấu trúc, nhưng cần điền nội dung cụ thể cho từng dự án. |
+| **Template** | `docs/START_POINT.md`, `current_status.md` (bản mẫu), `progress_tracker.md` | ✅ **Tái sử dụng như mẫu** | Bạn dùng lại cấu trúc, nhưng cần điền nội dung cụ thể cho từng dự án. |
 | **Tài Liệu Đặc Thù Dự Án**| `srs_v1.md`, `project_roadmap.md`, `feature_backlog.md`, `dev_env_guide.md`, `project_overview.md` | ❌ **Tạo mới** | Đây là "thịt" của dự án, phải được viết từ đầu cho mỗi dự án mới. |
 
 ---
@@ -174,7 +174,7 @@ Lúc này, bạn đã có hai tài liệu nền tảng quan trọng nhất của
 Bây giờ là lúc "tuyển" **Coding Agent** vào team.
 
 1.  **Giao việc cho Coding Agent**: Đưa cho nó hai file `srs_v1.md` và `dev_env_guide.md` và ra lệnh: *"**Đầu tiên, hãy đọc `docs/00_guides/documentation_maintenance_guide.md` để hiểu các quy tắc về việc viết tài liệu.** Sau đó, dựa vào hai tài liệu này, hãy tạo các tài liệu kế hoạch sau: `project_roadmap.md`, `feature_backlog.md`, và một file tóm tắt `project_overview.md`."*
-2.  **Cập nhật các Template**: Yêu cầu Coding Agent điền thông tin ban đầu vào các file template như `current_status.md` và cập nhật các đường link trong `docs/README.md`.
+2.  **Cập nhật các Template**: Yêu cầu Coding Agent điền thông tin ban đầu vào các file template như `current_status.md` và cập nhật các đường link trong `docs/START_POINT.md`.
 
 Coding Agent sẽ đọc, tổng hợp và tạo ra các tài liệu phái sinh theo đúng chuẩn bạn đã định ra, giúp bạn tiết kiệm hàng giờ làm việc và đảm bảo sự nhất quán.
 
@@ -197,7 +197,7 @@ Bằng cách tuân theo 4 bước này, bạn có thể nhân bản mô hình th
 
 Sau khi hoàn thiện hệ thống, chúng tôi đã thực hiện một bài kiểm tra cuối cùng. Chúng tôi mở một phiên chat hoàn toàn mới với AI, không có bất kỳ lịch sử nào. Lời nhắc duy nhất chúng tôi đưa ra là:
 
-> "Chào bạn. Bạn là một AI Assistant cho dự án iOS Chatbot. Nhiệm vụ đầu tiên của bạn là hãy đọc file `docs/README.md` và làm theo hướng dẫn dành cho vai trò 'AI Assistant'. Sau khi đọc xong, hãy tóm tắt cho tôi về dự án, tình trạng hiện tại, và đề xuất 3 bước tiếp theo chúng ta cần làm."
+> "Chào bạn. Bạn là một AI Assistant cho dự án iOS Chatbot. Nhiệm vụ đầu tiên của bạn là hãy đọc file `docs/START_POINT.md` và làm theo hướng dẫn dành cho vai trò 'AI Assistant'. Sau khi đọc xong, hãy tóm tắt cho tôi về dự án, tình trạng hiện tại, và đề xuất 3 bước tiếp theo chúng ta cần làm."
 
 Kết quả thật đáng kinh ngạc. AI đã trả lời:
 
