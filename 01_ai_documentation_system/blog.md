@@ -52,22 +52,24 @@ Nó trả lời câu hỏi đầu tiên của bất kỳ người mới nào: **
 ### 🤖 AI Assistant
 **Mục đích**: Hiểu project context nhanh chóng
 **Tổng thời gian**: 4 phút
-1. [Project Overview](...)
-2. [Current Status](...)
-3. [.cursorrules](...)
+1. [Project Overview](https://github.com/phuc-nt/knowledge/blob/master/01_ai_documentation_system/templates/docs_structure/00_context/project_overview.md)
+2. [Current Status](https://github.com/phuc-nt/knowledge/blob/master/01_ai_documentation_system/templates/docs_structure/00_context/current_status.md)
+3. [.cursorrules](https://github.com/phuc-nt/knowledge/blob/master/01_ai_documentation_system/templates/docs_structure/.cursorrules)
 
 ### 👨‍💻 Developer Mới
 **Mục đích**: Onboard và bắt đầu contribute
 **Tổng thời gian**: 30 phút
-1. [Project Overview](...)
-2. [SRS v1](...)
-3. [Dev Environment Guide](...)
-4. [Task Management Guide](...)
+1. [Project Overview](https://github.com/phuc-nt/knowledge/blob/master/01_ai_documentation_system/templates/docs_structure/00_context/project_overview.md)
+2. [SRS v1](https://github.com/phuc-nt/knowledge/blob/master/01_ai_documentation_system/templates/docs_structure/01_preparation/srs_v1.md)
+3. [Dev Environment Guide](https://github.com/phuc-nt/knowledge/blob/master/01_ai_documentation_system/templates/docs_structure/02_development/dev_env_guide.md)
+4. [Task Management Guide](https://github.com/phuc-nt/knowledge/blob/master/01_ai_documentation_system/templates/docs_structure/00_guides/task_management_guide.md)
 
 ### 📋 Project Manager
 **Mục đích**: Theo dõi progress và planning
 **Tổng thời gian**: 15 phút
-...
+1. [Current Status](https://github.com/phuc-nt/knowledge/blob/master/01_ai_documentation_system/templates/docs_structure/00_context/current_status.md)
+2. [Feature Backlog](https://github.com/phuc-nt/knowledge/blob/master/01_ai_documentation_system/templates/docs_structure/01_preparation/feature_backlog.md)
+3. [Project Roadmap](https://github.com/phuc-nt/knowledge/blob/master/01_ai_documentation_system/templates/docs_structure/01_preparation/project_roadmap.md)
 ```
 
 Chỉ bằng cách định vị vai trò của mình, người dùng (cả người và AI) ngay lập tức có một lộ trình đọc được tối ưu hóa. Một AI Assistant chỉ cần 4 phút để nắm bắt toàn bộ bối cảnh và sẵn sàng làm việc. Một developer mới cần 30 phút để không chỉ hiểu dự án mà còn cả quy trình làm việc.
@@ -157,7 +159,11 @@ Trong vài phút, bạn đã có ngay một hệ thống quy trình làm việc 
 
 Đây là lúc "bộ óc sáng tạo" của AI vào cuộc.
 
-1.  **Tạo SRS với Reasoning AI**: Bắt đầu với một ý tưởng mơ hồ. Sử dụng một **Reasoning AI** (như Gemini Advanced, Claude 3 Opus) và một prompt chuyên dụng để biến ý tưởng đó thành một bản `srs_v1.md` chi tiết. Quy trình này được mô tả kỹ trong bài viết [Tối ưu việc viết Requirement với AI](https://phucnt.substack.com/p/toi-uu-viec-viet-requirement-voi). Quan trọng nhất, trong quá trình này, AI sẽ giúp bạn **chốt hạ Tech Stack**.
+1.  **Tạo SRS qua cuộc phỏng vấn với AI Chuyên Gia**: Thay vì điền vào một template khô khan, chúng tôi áp dụng một phương pháp tương tác hơn.
+    - **Định danh cho AI**: Đầu tiên, chúng tôi "dạy" cho AI cách trở thành một chuyên gia phân tích nghiệp vụ bằng cách cung cấp cho nó một bộ chỉ dẫn chi tiết. Bộ chỉ dẫn này biến AI từ một công cụ đa năng thành một chuyên gia biết cách đặt câu hỏi để khai thác thông tin.
+    - **Để AI dẫn dắt**: Chúng tôi chỉ cần bắt đầu với một ý tưởng cốt lõi ("tôi muốn làm một chatbot cho iOS"). AI chuyên gia sẽ chủ động đặt các câu hỏi để làm rõ mọi khía cạnh, từ mục tiêu, người dùng, cho đến các yêu cầu kỹ thuật. Quá trình này giống như một cuộc phỏng vấn thực sự.
+
+    Phương pháp này giúp tạo ra một bản `srs_v1.md` sâu sắc và đầy đủ hơn nhiều. Quy trình chi tiết và các prompt cần thiết đều được hướng dẫn trong file [SRS Creation Guide](https://github.com/phuc-nt/knowledge/blob/master/01_ai_documentation_system/templates/sample_prompts/srs_creation_prompt.md). Quan trọng nhất, qua cuộc trò chuyện này, AI sẽ giúp bạn **chốt hạ Tech Stack** một cách tự nhiên.
 
 2.  **Tạo Dev Guide với Search AI**: Khi đã có Tech Stack trong SRS, hãy giao nó cho một **Internet-Search AI** (như Perplexity). Yêu cầu nó tạo ra một file `dev_env_guide.md` dựa trên stack đó.
 
